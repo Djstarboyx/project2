@@ -13,10 +13,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 // Database Connection
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/confessions-db', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-})
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/confessions-db')
 .then(() => console.log(' MongoDB Connected'))
 .catch(err => console.error(' MongoDB Connection Error:', err));
 

@@ -1,5 +1,5 @@
 const express = require('express');
-const Confession = require('models/Confession');
+const Confession = require('../models/Confession');
 const authMiddleware = require('../middleware/auth');
 
 const router = express.Router();
